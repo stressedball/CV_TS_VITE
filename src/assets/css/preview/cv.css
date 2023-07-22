@@ -1,0 +1,12 @@
+#cv {
+    border: 1px solid;
+    margin: 1rem auto;
+    height: calc(100vh - calc(4rem + 2px));
+    width: calc(0.707 * calc(100vh - calc(2rem + 2px)));
+}
+
+@media screen and (max-width: 1200px) {
+    /* #previewContainer {
+        display: none;
+    }    */
+}

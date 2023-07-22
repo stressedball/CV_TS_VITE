@@ -1,0 +1,8 @@
+svg {
+    stroke: black;
+    fill: black;
+}
+
+svg.add {
+    fill : none;
+}

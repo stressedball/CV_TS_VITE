@@ -1,0 +1,84 @@
+body {
+  margin: 0;
+  padding: 0;
+}
+
+#root {
+  display: flex;
+  padding: 1rem;
+  box-sizing: border-box;
+}
+
+#makeContainer,
+#previewContainer {
+  flex: 1;
+}
+
+.align {
+  align-items: center;
+}
+
+.column {
+  flex-direction: column;
+}
+
+.flex {
+  display: flex;
+}
+
+.justifyEnd {
+  justify-content: space-between;
+}
+
+.wrap {
+  flex-wrap: wrap;
+}
+
+p {
+  margin: 0;
+}
+
+input {
+  box-sizing: border-box;
+}
+
+input:not([type="date"]) {
+  padding: 0.3rem;
+}
+.hide {
+  display: none;
+}
+
+.grow {
+  flex: 1;
+}
+
+.options {
+  padding-left: 0.3rem;
+}
+
+/* Remove arrows from input:number */
+/* Chrome, Safari, Edge, Opera */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+@media screen and (max-width: 1200px) {
+  #root {
+    display: block;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .flex.block {
+    display: block;
+  }
+}
+
+@media screen and (max-width: 260px) {
+  input {
+    padding: 0.2rem;
+  }
+}
