@@ -14,6 +14,7 @@ import Experience from './modules/Experience';
 import Diploma from './modules/Diploma';
 import Skill from './modules/Skill';
 import Hobby from './modules/Hobby';
+import BulletPoint from '../../assets/svg/BulletPoint';
 
 export default function PreviewLayout() {
     const {identity} = React.useContext(IdentityContext) as IdentityContextType;
@@ -22,23 +23,43 @@ export default function PreviewLayout() {
     const {skills} = React.useContext(SkillsContext) as SkillsContextType;
     const {hobbies} = React.useContext(HobbiesContext) as HobbyContextType;
     return (
-        <div className='flex' id='cv'>
+        <div id='cv'>
             <Sidebar identity={identity} />
 
-            <div>
-                <Header identity={identity} />
+            <Header identity={identity} />
 
-                <h3>Experiences</h3>
-                <Experience experiences={experiences} />
+            <div id='cvContent'>
+                <div className='cvBlock'>
+                    <div className='flex align'>
+                        <BulletPoint />
+                        <p className='legend right'>Experiences</p>
+                    </div>
+                    <Experience experiences={experiences} />
+                </div>
 
-                <h3>Diplomas</h3>
-                <Diploma diplomas={diplomas} />
+                <div className='cvBlock'>
+                    <div className='flex align'>
+                        <BulletPoint />
+                        <p className='legend right'>Diplomas</p>
+                    </div>
+                    <Diploma diplomas={diplomas} />
+                </div>
 
-                <h3>Skills</h3>
-                <Skill skills={skills} />
+                <div className='cvBlock'>
+                    <div className='flex align'>
+                        <BulletPoint />
+                        <p className='legend right'>Skills</p>
+                    </div>
+                    <Skill skills={skills} />
+                </div>
 
-                <h3>Hobbies</h3>
-                <Hobby hobbies={hobbies} />
+                <div className='cvBlock'>
+                    <div className='flex align'>
+                        <BulletPoint />
+                        <p className='legend right'>Hobbies</p>
+                    </div>
+                    <Hobby hobbies={hobbies} />
+                </div>
             </div>
         </div>
     );

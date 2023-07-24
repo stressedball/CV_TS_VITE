@@ -4,33 +4,29 @@ import {ExperiencesContext, ExperiencesContextType} from '../../../assets/contex
 
 export default function Company(props: {company: string; id: string}) {
     const {handleExperience} = React.useContext(ExperiencesContext) as ExperiencesContextType;
-
+    const [compact, setCompact] = React.useState(false);
     const handleCompany = (e: any) => {
         handleExperience(props.id, e.target.value, 'company');
     };
-    const [compact, setCompact] = React.useState(false);
     React.useEffect(() => {
-        props.company === '' ? setCompact(false) : setCompact(true);
+        props.company !== '' ? setCompact(true) : setCompact(false);
     }, []);
     return (
         <>
-            {!compact ? (
                 <input
-                    type='text'
-                    placeholder='Company'
-                    value={props.company}
-                    onChange={(e) => handleCompany(e)}
-                    onBlur={(e) => {
-                        handleCompany(e)
-                        setCompact(true)
-                    }}
-                    autoFocus={true}
-                />
-            ) : (
-                <p className='compact company' onClick={() => setCompact(false)}>
-                    {props.company}
-                </p>
-            )}
+                id='company'
+                name='company'
+                type='text'
+                placeholder='Company'
+                value={props.company}
+                onChange={(e) => handleCompany(e)}
+                onBlur={(e) => {
+                    if (e.target.value !== '') setCompact(true);
+                    handleCompany(e);
+                }}
+                autoFocus={true}
+                className={`company ${compact ? 'compact' : ''}`}
+            />
         </>
     );
 }

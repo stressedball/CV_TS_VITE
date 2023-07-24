@@ -1,12 +1,13 @@
 // libraries
 import React from 'react';
+// css
+import '../../../assets/css/make/diploma.css';
 // scripts
 import {DiplomasContext, DiplomaContextType} from '../../../assets/context/DiplomaContext';
 import Title from './Title';
 import School from './School';
 import DateOfObtention from './DateOfObtention';
 import AddSvg from '../../../assets/svg/Add';
-import EditSvg from '../../../assets/svg/Edit';
 import Remove from '../../../assets/svg/Remove';
 
 export default function DiplomaLayout() {
@@ -23,15 +24,12 @@ export default function DiplomaLayout() {
             <div className='flex wrap'>
                 {diplomas.map((diploma) => {
                     return (
-                        <div key={diploma.id} className='flex align wrap'>
+                        <div key={diploma.id} className='diploma'>
                             <Title title={diploma.title} id={diploma.id} />
                             <School school={diploma.school} id={diploma.id} />
                             <DateOfObtention dateOfObtention={diploma.dateOfObtention} id={diploma.id} />
-                            <div className='flex align'>
-                                <EditSvg />
-                                <div onClick={() => removeDiploma(diploma.id)}>
-                                    <Remove />
-                                </div>
+                            <div onClick={() => removeDiploma(diploma.id)}>
+                                <Remove />
                             </div>
                         </div>
                     );

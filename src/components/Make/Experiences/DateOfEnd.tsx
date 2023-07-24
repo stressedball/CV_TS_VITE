@@ -1,14 +1,14 @@
-import React from 'react';
+import React, {useEffect, useState} from 'react';
 //
 import {ExperiencesContext, ExperiencesContextType} from '../../../assets/context/ExperiencesContext';
 
-export default function DateOfEnd(props: {
-    id: string;
-    dateOfEnd: Date;
-    // compact: boolean;
-}) {
+export default function DateOfEnd(props: {id: string; dateOfEnd: Date; current: boolean}) {
     const {handleExperience} = React.useContext(ExperiencesContext) as ExperiencesContextType;
-
+    const [disable, setDisable] = useState(false);
+    useEffect(() => {
+        if (props.current) setDisable(true);
+        else setDisable(false);
+    });
     return (
         <>
             <p className='dateLabel'>To</p>
@@ -21,27 +21,8 @@ export default function DateOfEnd(props: {
                     if (!e.target.valueAsDate) return;
                     handleExperience(props.id, e.target.valueAsDate, 'dateOfEnd');
                 }}
+                disabled={disable ? true : false}
             />
         </>
     );
-}
-
-{
-    /* {props.compact ? (
-                <>
-                    {props.isCurrent ? (
-                        <p className='sticker current'>Current Position</p>
-                    ) : (
-                        <p className='sticker dateOfEnd'>{dateFormatter(dateOfEnd)}</p>
-                    )}
-                </>
-            ) : (
-                <div className='flex align gap'>
-                    {props.isCurrent ? (
-                        <input type='date' name='' id='' value={dateOfEnd.toISOString().split('T')[0]} disabled />
-                    ) : (
-
-                    )}
-                </div>
-            )} */
 }

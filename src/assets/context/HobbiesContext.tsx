@@ -20,10 +20,10 @@ function HobbiesProvider({children}: ChildrenType) {
     const [hobbies, setHobbies] = useState(Array<HobbyInterface>);
     const addHobby = () => setHobbies([...hobbies, EmptyHobby]);
     const handleHobby = (id: string, value: string) => {
-        hobbies.map((hobby) => {
+        setHobbies(hobbies.map((hobby) => {
             if (hobby.id === id) hobby.name = value;
             return hobby;
-        });
+        }));
     };
     const removeHobby = (id: string) => setHobbies(hobbies.filter((hobby) => hobby.id !== id));
     useEffect(() => {

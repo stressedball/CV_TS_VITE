@@ -2,8 +2,9 @@ nav#navigation {
     display: none;
 }
 
-@media screen and (max-width: 1200px) {
+@media screen and (max-width: 1220px) {
     nav#navigation {
-        display: block;
+        display: flex;
+        justify-content: center;
     }
 }

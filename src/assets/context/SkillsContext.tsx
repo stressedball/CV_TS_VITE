@@ -20,10 +20,15 @@ function SkillsProvider({children}: ChildrenType) {
     const [skills, setSkills] = useState(Array<SkillInterface>);
     const addSkill = () => setSkills([...skills, EmptySkill]);
     const handleSkill = (id: string, value: string) => {
-        skills.map((skill) => {
-            if (skill.id === id) skill.name = value;
-            return skill;
-        });
+        setSkills(
+            skills.map((skill) => {
+                if (skill.id === id) {
+                    console.log('here', value);
+                    skill.name = value;
+                }
+                return skill;
+            })
+        );
     };
     const removeSkill = (id: string) => setSkills(skills.filter((skill) => skill.id !== id));
     useEffect(() => {

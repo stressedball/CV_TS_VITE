@@ -7,10 +7,7 @@ export default function DateOfEntry(props: {
     dateOfEntry: Date;
 }) {
     const {handleExperience} = React.useContext(ExperiencesContext) as ExperiencesContextType;
-    // const [compact, setCompact] = React.useState(false);
-    // React.useEffect(() => {
-    //     props.dateOfEntry === '' ? setCompact(false) : setCompact(true);
-    // }, []);
+
     return (
         <>
             <p className='dateLabel'>From</p>

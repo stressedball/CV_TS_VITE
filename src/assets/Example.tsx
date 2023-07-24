@@ -20,7 +20,7 @@ const example1 = {
         dateOfEntry: new Date('2005-01-01'),
         dateOfEnd: new Date(),
         id: 'example1_exp',
-        current: false,
+        current: true,
         company: 'EverGrande',
     },
     diploma: {

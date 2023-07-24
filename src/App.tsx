@@ -19,13 +19,12 @@ import Nav from './components/Nav';
 function App() {
     const [hide, setHide] = useState('');
     useEffect(() => {
-        if (window.innerWidth < 1200) {
+        if (window.innerWidth <= 1220) {
             setHide('hide');
         } else setHide('');
-    }, []);
-    useEffect(() => {
+
         const setVisibility = () => {
-            if (window.innerWidth < 1200) {
+            if (window.innerWidth <= 1220) {
                 setHide('hide');
             } else setHide('');
         };

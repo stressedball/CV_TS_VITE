@@ -1,20 +1,21 @@
-import {ExperienceInterface} from '../../../Types';
+import {ExperienceInterface} from '../../../assets/Types';
+import dateFormatter from '../../../assets/Helpers';
 
 export default function Experience(props: {experiences: Array<ExperienceInterface>}) {
     return props.experiences.map((experience) => {
         return (
-            <div key={experience.id} className='flex align'>
+            <div key={experience.id} className=''>
                 <p>
                     {experience.title}
-                    {experience.company ? ` - ${experience.company}` : ''}
+                    {experience.company ? ` / ${experience.company}` : ''}
                 </p>
                 {experience.title && experience.company ? (
                     <>
-                        <p>{experience.dateOfEntry.toDateString()}</p>
+                        <p style={{display: 'inline-block'}}>{dateFormatter(experience.dateOfEntry)}</p>
                         {experience.current === true ? (
-                            'Present'
+                            <p style={{display: 'inline-block'}}>Present</p>
                         ) : (
-                            <p>{experience.dateOfEnd.toDateString()}</p>
+                            <p style={{display: 'inline-block'}}>{dateFormatter(experience.dateOfEnd)}</p>
                         )}
                     </>
                 ) : null}

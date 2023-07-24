@@ -9,7 +9,7 @@ export default function Coordinates() {
 
     return (
         <>
-            <div className='flex align wrap block'>
+            <div className='flex align block'>
                 <p className='label'>Phone</p>
                 <input
                     onBlur={(e) => e.target.classList.add('compact')}
@@ -28,7 +28,7 @@ export default function Coordinates() {
                     }}
                 />
             </div>
-            <div className='flex align wrap block'>
+            <div className='flex align block'>
                 <p className='label'>Email</p>
                 <input
                     onBlur={(e) => e.target.classList.add('compact')}
@@ -47,7 +47,7 @@ export default function Coordinates() {
                     }}
                 />
             </div>
-            <div className='flex align wrap block'>
+            <div className='flex align block'>
                 <p className='label'>Linkedin</p>
                 <input
                     onBlur={(e) => e.target.classList.add('compact')}
@@ -66,7 +66,7 @@ export default function Coordinates() {
                     }}
                 />
             </div>
-            <div className='flex align wrap block'>
+            <div className='flex align block'>
                 <p className='label'>GitHub</p>
                 <input
                     onBlur={(e) => e.target.classList.add('compact')}

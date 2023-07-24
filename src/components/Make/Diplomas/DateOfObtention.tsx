@@ -6,12 +6,15 @@ export default function DateOfObtention(props: {dateOfObtention: Date; id: strin
     const {handleDiploma} = React.useContext(DiplomasContext) as DiplomaContextType;
 
     return (
-        <input
-            type='date'
-            name='diploma'
-            id='diploma'
-            value={props.dateOfObtention.toISOString().split('T')[0]}
-            onChange={(e) => handleDiploma(props.id, e.target.valueAsDate, 'school')}
-        />
+        <>
+            <p className='dateLabel'>Graduation</p>
+            <input
+                type='date'
+                name='diplomaDate'
+                id='diplomaDate'
+                value={props.dateOfObtention.toISOString().split('T')[0]}
+                onChange={(e) => handleDiploma(props.id, e.target.valueAsDate, 'school')}
+            />
+        </>
     );
 }

@@ -7,8 +7,8 @@ export default function Title(props: {title: string; id: string}) {
     return (
         <input
             type='text'
-            name='title'
-            id='title'
+            name='diploma'
+            id='diploma'
             value={props.title}
             onChange={(e) => handleDiploma(props.id, e.target.value, 'title')}
         />

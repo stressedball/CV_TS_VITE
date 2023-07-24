@@ -1,8 +1,115 @@
+:root {
+    --cv-padding-left: 1.2rem;
+}
+
+/* THE WHOLE PAGE */
 #cv {
     border: 1px solid;
     margin: 1rem auto;
-    height: calc(100vh - calc(4rem + 2px));
-    width: calc(0.707 * calc(100vh - calc(2rem + 2px)));
+    display: grid;
+    grid-template-rows: 2rem 12rem auto;
+    grid-template-columns: 2rem 12rem auto;
+    background-color: rgb(244, 244, 244);
+    overflow: visible;
+}
+
+/* COMMONS */
+.legend:not(.name, .title) {
+    font-size: 1rem;
+    letter-spacing: 0.1rem;
+    font-weight: 500;
+    text-transform: uppercase;
+    word-wrap: break-word;
+    box-sizing: border-box;
+    text-overflow: ellipsis;
+}
+
+/* RIGHT SIDE */
+/* HEADER */
+.headerContainer {
+    grid-column: 1/4;
+    grid-row: 2;
+    background-color: hsla(18, 52%, 85%, 0.822);
+    display: grid;
+    grid-template-columns: inherit;
+}
+
+header.cvHero {
+    grid-column: 3;
+    padding-left: var(--cv-padding-left);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-top: 2rem;
+}
+
+.legend.name {
+    font-size: 2rem;
+}
+
+.legend.name:nth-child(2) {
+    text-transform: uppercase;
+}
+
+.legend.title {
+    margin-top: 0.2rem;
+    font-size: 1.3rem;
+    letter-spacing: 0.05rem;
+}
+/* BODY */
+#cvContent {
+    grid-column: 3;
+    grid-row: 3/4;
+    padding-left: var(--cv-padding-left);
+    padding-right: var(--cv-padding-left);
+    padding-top: 2rem;
+}
+
+.cvBlock:not(:nth-child(1)) {
+    padding-top: 2rem;
+}
+
+.cvBlock div:nth-child(2) {
+    padding-left: 2rem;
+}
+
+/* LEFT SIDE */
+#sidebar {
+    font-size: 0.9rem;
+    background-color: hsl(180, 25%, 65%);
+    grid-column: 2;
+    grid-row: 1/4;
+    z-index: 1;
+    display: grid;
+    grid-template-rows: inherit;
+    padding: 0 1rem;
+    font-size: 0.8rem;
+    color: white;
+}
+
+.subSidebar {
+    /* 8px for half of svg height */
+    margin-top: calc(8px + 2rem);
+    grid-row: 3;
+    justify-content: start;
+    gap: 5rem;
+}
+
+.profilePic {
+    grid-row: 2;
+    border: 2px solid white;
+    border-radius: 50%;
+    height: calc(100% - 4px);
+    box-sizing: content-box;
+    width: calc(100% + 2rem - 4px);
+    margin-left: -1rem;
+    background-position: center;
+}
+
+svg.smallIcons {
+    width: 1.5rem;
+    height: 1.5rem;
+    margin-right: 0.2rem;
 }
 
 @media screen and (max-width: 1200px) {

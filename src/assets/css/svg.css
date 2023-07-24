@@ -4,5 +4,14 @@ svg {
 }
 
 svg.add {
-    fill : none;
+    fill: none;
+}
+
+svg.smallIcons, svg.smallIcons path {
+    fill: white;
+    stroke: white;
+}
+
+svg.smallIcons:hover, svg.bullet:hover {
+    cursor: default;
 }

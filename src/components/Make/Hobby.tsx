@@ -1,8 +1,9 @@
-import React from 'react';
+import React, {useEffect} from 'react';
+//
+import '../../assets/css/make/tiles.css';
 //
 import {HobbiesContext, HobbyContextType} from '../../assets/context/HobbiesContext';
 import AddSvg from '../../assets/svg/Add';
-import EditSvg from '../../assets/svg/Edit';
 import Remove from '../../assets/svg/Remove';
 
 export default function Hobbies() {
@@ -26,22 +27,25 @@ export default function Hobbies() {
 
 function Hobby(props: {name: string; id: string}) {
     const {handleHobby, removeHobby} = React.useContext(HobbiesContext) as HobbyContextType;
+    const [compact, setCompact] = React.useState(false);
+    useEffect(() => {
+        props.name !== '' ? setCompact(true) : setCompact(false);
+    }, []);
     return (
-        <div className='flex align'>
+        <div className='tile'>
             <input
                 type='text'
                 name='hobby'
                 id='hobby'
                 value={props.name}
                 onChange={(e) => handleHobby(props.id, e.target.value)}
+                className={`${compact ? 'compact' : ''}`}
+                onBlur={() => setCompact(true)}
+                onClick={() => setCompact(false)}
+                autoFocus={true}
             />
-            <div className='flex align'>
-                <div>
-                    <EditSvg />
-                </div>
-                <div onClick={() => removeHobby(props.id)}>
-                    <Remove />
-                </div>
+            <div onClick={() => removeHobby(props.id)}>
+                <Remove />
             </div>
         </div>
     );

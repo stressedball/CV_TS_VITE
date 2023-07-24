@@ -19,7 +19,7 @@ export default function Front() {
                     }}
                     onBlur={(e) => e.target.classList.add('compact')}
                     onClick={(e: any) => e.target.classList.remove('compact')}
-                    className={`${identity.firstName !== '' ? 'compact' : ''}`}
+                    className={`identity ${identity.firstName !== '' ? 'compact' : ''}`}
                     type='text'
                     name='firstName'
                     id='firstName'
@@ -34,7 +34,7 @@ export default function Front() {
                     }}
                     onBlur={(e) => e.target.classList.add('compact')}
                     onClick={(e: any) => e.target.classList.remove('compact')}
-                    className={`${identity.lastName !== '' ? 'compact' : ''}`}
+                    className={`identity ${identity.lastName !== '' ? 'compact' : ''}`}
                     type='text'
                     name='lastName'
                     id='lastName'
@@ -48,7 +48,7 @@ export default function Front() {
                     }}
                     onBlur={(e) => e.target.classList.add('compact')}
                     onClick={(e: any) => e.target.classList.remove('compact')}
-                    className={`${identity.currentTitle !== '' ? 'compact' : ''}`}
+                    className={`identity ${identity.currentTitle !== '' ? 'compact' : ''}`}
                     type='text'
                     name='currentTitle'
                     id='currentTitle'
@@ -64,7 +64,7 @@ export default function Front() {
                     }}
                     onBlur={(e) => e.target.classList.add('compact')}
                     onClick={(e: any) => e.target.classList.remove('compact')}
-                    className={`${identity.description !== '' ? 'compact' : ''}`}
+                    className={`identity ${identity.description !== '' ? 'compact' : ''}`}
                     type='text'
                     name='description'
                     id='description'
