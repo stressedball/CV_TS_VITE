@@ -12,6 +12,7 @@ export default function CurrentJob(props: {id: string; current: boolean}) {
                 onClick={() => {
                     setCurrentJob(props.id, !props.current);
                 }}
+                className={props.current ? 'lock' : ''}
             />
         </>
     );

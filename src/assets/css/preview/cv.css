@@ -9,8 +9,8 @@
     display: grid;
     grid-template-rows: 2rem 12rem auto;
     grid-template-columns: 2rem 12rem auto;
-    background-color: rgb(244, 244, 244);
-    overflow: visible;
+    background-color: var(--primary);
+    overflow: scroll;
 }
 
 /* COMMONS */
@@ -29,9 +29,10 @@
 .headerContainer {
     grid-column: 1/4;
     grid-row: 2;
-    background-color: hsla(18, 52%, 85%, 0.822);
+    background-color: var(--secondary);
     display: grid;
     grid-template-columns: inherit;
+    color: var(--primary);
 }
 
 header.cvHero {
@@ -56,6 +57,7 @@ header.cvHero {
     font-size: 1.3rem;
     letter-spacing: 0.05rem;
 }
+
 /* BODY */
 #cvContent {
     grid-column: 3;
@@ -63,6 +65,14 @@ header.cvHero {
     padding-left: var(--cv-padding-left);
     padding-right: var(--cv-padding-left);
     padding-top: 2rem;
+}
+
+#cvContent * p {
+    display: inline;
+}
+
+span {
+    font-weight: 300;
 }
 
 .cvBlock:not(:nth-child(1)) {
@@ -73,10 +83,26 @@ header.cvHero {
     padding-left: 2rem;
 }
 
+p.bold {
+    font-weight: 600;
+}
+
+p.underline {
+    text-decoration: underline;
+}
+
+ul {
+    margin: 0;
+}
+
+li {
+    list-style: none;
+}
+
 /* LEFT SIDE */
 #sidebar {
     font-size: 0.9rem;
-    background-color: hsl(180, 25%, 65%);
+    background-color: var(--accent);
     grid-column: 2;
     grid-row: 1/4;
     z-index: 1;
@@ -116,4 +142,16 @@ svg.smallIcons {
     /* #previewContainer {
         display: none;
     }    */
+}
+
+/* Putting  #cv element here to get dimensions */
+/* Further styling in 'cv.css' */
+/* A4 = 210 x 297 mm ~ w/h of 0.707 */
+#cv {
+    /* taking 100vh - 4rem of #root padding + 2px of border */
+    height: calc(50vw - calc(4rem + 2px));
+    width: calc(0.707 * calc(50vw - calc(4rem + 2px)));
+    height: 297mm;
+    width: 210mm;
+
 }

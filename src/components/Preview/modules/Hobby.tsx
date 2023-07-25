@@ -5,13 +5,13 @@ export default function Hobby(props: {hobbies: Array<HobbyInterface>}) {
         return <HobbyFactory key={hobby.id} hobby={hobby}/>
     })
     return (
-        <div className="flex column">
+        <ul>
             {list}
-        </div>
+        </ul>
     )
 }
 function HobbyFactory(props: {hobby: HobbyInterface}) {
     return (
-        <p>{props.hobby.name}</p>
+        <li>{props.hobby.name}.</li>
     )
 }

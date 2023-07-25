@@ -1,21 +1,9 @@
 .tile {
     border-radius: 1rem;
     padding: 0.3rem 0.5rem;
-    margin: auto;
     box-shadow: var(--boxShadowContainer);
     display: flex;
     align-items: center;
     box-sizing: border-box;
-}
-
-
-
-@media screen and (max-width: 350px) {
-    /* 250px ~ 15rem */
-    /* 2rem for page padding */
-    /* 2 more rem for svg */
-    /* 1 rem for spacing */
-    .tile input {
-        max-width: 10rem;
-    }
+    max-width: 100%;
 }

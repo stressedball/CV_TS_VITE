@@ -2,8 +2,16 @@
     display: grid;
     grid-template-rows: 50% 25% 25%;
     grid-template-columns: 50% 50%;
+    box-shadow: var(--boxShadowContainer);
+    border-radius: 1rem;
 }
 
+.visitCard.grid input {
+    background-color: var(--primary);
+    border-bottom: 1px solid var(--secondary);
+}
+
+ 
 .visitCard:nth-of-type(2) {
     margin-top: 1rem;
 }
@@ -11,10 +19,6 @@
 .visitCard:nth-of-type(2) div div {
     flex: 1;
     margin-bottom: 0;
-}
-
-input:not(#firstName, #lastName, #currentTitle, #description) {
-    border-radius: 1rem;
 }
 
 input#currentTitle {
@@ -35,12 +39,14 @@ input#description {
     border-bottom-left-radius: 1rem;
     border-bottom-right-radius: 1rem;
     padding: 0.5rem;
+    border-bottom: none;
 }
 
 input#firstName {
     grid-column: 1/2;
     text-align: right;
     border-top-left-radius: 1rem;
+    font-size: 2rem;
 }
 
 input#lastName {
@@ -66,6 +72,8 @@ input#zipCode {
 }
 
 input#street {
+    width: 100%;
+    min-width: 13rem;
     flex: 1;
 }
 
@@ -73,6 +81,7 @@ input#street {
     margin-bottom: 0.3rem;
 }
 
+/* fonts control */
 @media screen and (max-width: 1000px) {
     input#currentTitle {
         font-size: 1.4rem;
@@ -92,7 +101,6 @@ input#street {
 }
 
 @media screen and (max-width: 820px) {
-
     input#addressNumber,
     input#town,
     input#zipCode,

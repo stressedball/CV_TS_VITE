@@ -16,7 +16,7 @@ export default function Remove() {
                 cy='12'
                 r='9'
                 // fill='#2A4157'
-                fillOpacity='0.24'
+                // fillOpacity='0.95'
             />
             <path
                 className='remove'

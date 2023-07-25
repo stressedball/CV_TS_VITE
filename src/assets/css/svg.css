@@ -1,17 +1,39 @@
 svg {
-    stroke: black;
-    fill: black;
+    stroke: var(--accent);
+    fill: var(--primary);
 }
 
+/* ADD */
 svg.add {
     fill: none;
 }
 
-svg.smallIcons, svg.smallIcons path {
+svg.add:hover{
+    stroke: var(--secondary);
+}
+/* REMOVE */
+svg.remove {
+    padding-left: 0.2rem;
+}
+
+svg.remove:hover {
+    stroke:  hsl(0, 82%, 57%);
+}
+
+/* PREVIEW */
+svg.smallIcons,
+svg.smallIcons path {
     fill: white;
     stroke: white;
 }
 
-svg.smallIcons:hover, svg.bullet:hover {
+svg.smallIcons:hover,
+svg.bullet:hover {
     cursor: default;
+}
+
+/* GRADUATE */
+svg.graduate {
+    stroke: var(--secondary);
+    fill: var(--secondary);
 }
