@@ -12,12 +12,9 @@
 }
 
 :root {
-  /* white */
-  --primary: hsl(192, 20%, 95%);
-  /* blue dark almost black */
-  --secondary: hsl(219, 74%, 16%);
-  /* blue azure */
-  --accent: hsl(184, 57%, 42%);
+  --primary: #fffffe;
+  --secondary: #2a3135;
+  --accent:#3ca86f;
   /*  */
   --boxShadowContainer: 0 0 3px 0 var(--secondary);
   --borderColor: var(--secondary)

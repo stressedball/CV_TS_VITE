@@ -10,7 +10,6 @@
     grid-template-rows: 2rem 12rem auto;
     grid-template-columns: 2rem 12rem auto;
     background-color: var(--primary);
-    overflow: scroll;
 }
 
 /* COMMONS */
