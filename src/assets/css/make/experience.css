@@ -62,12 +62,10 @@
 .compact.title {
     font-weight: bold;
     font-size: 1.1rem;
-    text-decoration: underline;
 }
 
 .compact.company {
     text-transform: uppercase;
-    font-style: italic;
     font-size: 1.1rem;
 }
 
@@ -87,29 +85,37 @@ input#company:focus {
 
 input[type="button"] {
     margin: 0 0.5rem;
-    border: 1px solid var(--secondary);
+    border: 1px solid var(--accent);
+    color: var(--accent);
     min-width: 4rem;
-}
-
-input[type="button"]:not(.lock):hover {
-    color: var(--primary);
-    background-color: var(--accent);
-    border: 1px solid var(--primary);
 }
 
 input[type="button"].lock {
     font-weight: 600;
     background-color: var(--secondary);
     color: var(--primary);
-    border: 1px solid var(--accent);
+    border: 1px solid var(--secondary);
 }
 
-input[type="button"].lock:hover {
+input[type="button"].lock {
+    font-weight: 600;
+    background-color: var(--secondary);
+    color: var(--primary);
+    border: 1px solid var(--secondary);
+}
+
+input.hover:not(.lock) {
+    color: var(--primary);
+    background-color: var(--accent);
+}
+
+input.lock.hover {
     background-color: var(--primary);
-    color: var(--accent);
+    color: var(--secondary);
 }
 
 @media screen and (max-width: 840px) {
+
     .compact.company,
     .compact.title {
         height: 2rem;

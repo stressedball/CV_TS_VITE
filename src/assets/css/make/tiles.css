@@ -7,3 +7,11 @@
     box-sizing: border-box;
     max-width: 100%;
 }
+
+.tile input.compact {
+    box-shadow: none !important;
+}
+
+.tile input {
+    border: none !important;
+}

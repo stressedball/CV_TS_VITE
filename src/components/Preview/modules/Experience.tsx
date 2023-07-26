@@ -15,6 +15,7 @@ export default function Experience(props: {experiences: Array<ExperienceInterfac
                         &nbsp;
                     </>
                 ) : null}
+                {/* <br></br> */}
                 {experience.title && experience.company ? (
                     <>
                         <p style={{fontSize: '0.95rem'}}>&#40;{dateFormatter(experience.dateOfEntry)}</p>

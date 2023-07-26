@@ -11,7 +11,5 @@ export default function Hobby(props: {hobbies: Array<HobbyInterface>}) {
     )
 }
 function HobbyFactory(props: {hobby: HobbyInterface}) {
-    return (
-        <li>{props.hobby.name}.</li>
-    )
+    return <li className='bubble'>{props.hobby.name ? `${props.hobby.name}.` : null}</li>;
 }

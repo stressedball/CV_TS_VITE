@@ -13,7 +13,10 @@ export default function Coordinates() {
                 <p className='label'>Phone</p>
                 <input
                     onBlur={(e) => e.target.classList.add('compact')}
-                    onClick={(e: any) => e.target.classList.remove('compact')}
+                    onClick={(e: React.SyntheticEvent) => {
+                        const target = e.target as HTMLInputElement
+                        target.classList.remove('compact')
+                    }}
                     className={`${identity.phone !== '' ? 'compact grow' : 'grow'}`}
                     type='number'
                     name='phone'
@@ -32,7 +35,10 @@ export default function Coordinates() {
                 <p className='label'>Email</p>
                 <input
                     onBlur={(e) => e.target.classList.add('compact')}
-                    onClick={(e: any) => e.target.classList.remove('compact')}
+                    onClick={(e: React.SyntheticEvent) => {
+                        const target = e.target as HTMLInputElement
+                        target.classList.remove('compact')
+                    }}
                     className={`${identity.email !== '' ? 'compact grow' : 'grow'}`}
                     type='email'
                     name='email'
@@ -51,7 +57,10 @@ export default function Coordinates() {
                 <p className='label'>Linkedin</p>
                 <input
                     onBlur={(e) => e.target.classList.add('compact')}
-                    onClick={(e: any) => e.target.classList.remove('compact')}
+                    onClick={(e: React.SyntheticEvent) => {
+                        const target = e.target as HTMLInputElement
+                        target.classList.remove('compact')
+                    }}
                     className={`${identity.linkedin !== '' ? 'compact grow' : 'grow'}`}
                     type='email'
                     datatype='address'
@@ -70,7 +79,10 @@ export default function Coordinates() {
                 <p className='label'>GitHub</p>
                 <input
                     onBlur={(e) => e.target.classList.add('compact')}
-                    onClick={(e: any) => e.target.classList.remove('compact')}
+                    onClick={(e: React.SyntheticEvent) => {
+                        const target = e.target as HTMLInputElement
+                        target.classList.remove('compact')
+                    }}
                     className={`${identity.gitHub !== '' ? 'compact grow' : 'grow'}`}
                     type='email'
                     name='gitHub'

@@ -5,9 +5,9 @@ import {example1} from '../Example';
 
 export type DiplomaContextType = {
     diplomas: Array<DiplomaInterface>;
-    addDiploma: Function;
-    handleDiploma: Function;
-    removeDiploma: Function;
+    addDiploma: () => void;
+    handleDiploma: (id: string, value: string | Date, key: string) => void;
+    removeDiploma: (id: string) => void;
 };
 
 export const DiplomasContext = createContext<DiplomaContextType | null>(null);
@@ -41,8 +41,7 @@ function DiplomasProvider({children}: ChildrenType) {
         setDiplomas([...diplomas, example1.diploma]);
     }, []);
     return (
-        <DiplomasContext.Provider
-            value={{ diplomas, addDiploma, handleDiploma, removeDiploma }}>
+        <DiplomasContext.Provider value={{diplomas, addDiploma, handleDiploma, removeDiploma}}>
             {children}
         </DiplomasContext.Provider>
     );

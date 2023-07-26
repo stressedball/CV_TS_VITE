@@ -5,9 +5,9 @@ import {example1} from '../Example';
 
 export type HobbyContextType = {
     hobbies: Array<HobbyInterface>;
-    addHobby: Function;
-    handleHobby: Function;
-    removeHobby: Function;
+    addHobby: () => void;
+    handleHobby: (id: string, value: string) => void;
+    removeHobby: (id: string) => void;
 };
 
 export const HobbiesContext = createContext<HobbyContextType | null>(null);
@@ -20,10 +20,12 @@ function HobbiesProvider({children}: ChildrenType) {
     const [hobbies, setHobbies] = useState(Array<HobbyInterface>);
     const addHobby = () => setHobbies([...hobbies, EmptyHobby]);
     const handleHobby = (id: string, value: string) => {
-        setHobbies(hobbies.map((hobby) => {
-            if (hobby.id === id) hobby.name = value;
-            return hobby;
-        }));
+        setHobbies(
+            hobbies.map((hobby) => {
+                if (hobby.id === id) hobby.name = value;
+                return hobby;
+            })
+        );
     };
     const removeHobby = (id: string) => setHobbies(hobbies.filter((hobby) => hobby.id !== id));
     useEffect(() => {

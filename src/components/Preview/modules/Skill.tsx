@@ -8,5 +8,5 @@ export default function Skill(props: {skills: Array<SkillInterface>}) {
 }
 
 function SkillFactory(props: {skill: SkillInterface}) {
-    return <li className='bubble'>{props.skill.name}.</li>;
+    return <li className='bubble'>{props.skill.name ? `${props.skill.name}.` : null}</li>;
 }

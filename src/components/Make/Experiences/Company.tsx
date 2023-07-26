@@ -5,15 +5,16 @@ import {ExperiencesContext, ExperiencesContextType} from '../../../assets/contex
 export default function Company(props: {company: string; id: string}) {
     const {handleExperience} = React.useContext(ExperiencesContext) as ExperiencesContextType;
     const [compact, setCompact] = React.useState(false);
-    const handleCompany = (e: any) => {
-        handleExperience(props.id, e.target.value, 'company');
+    const handleCompany = (e: React.SyntheticEvent): void => {
+        const target = e.target as HTMLInputElement;
+        handleExperience(props.id, target.value, 'company');
     };
     React.useEffect(() => {
         props.company !== '' ? setCompact(true) : setCompact(false);
     }, []);
     return (
         <>
-                <input
+            <input
                 id='company'
                 name='company'
                 type='text'

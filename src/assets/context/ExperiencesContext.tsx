@@ -5,10 +5,10 @@ import {example1} from '../Example';
 
 export type ExperiencesContextType = {
     experiences: Array<ExperienceInterface>;
-    addExperience: Function;
-    handleExperience: Function;
-    setCurrentJob: Function;
-    removeExperience: Function;
+    addExperience: () => void;
+    handleExperience: (id: string, value: string | Date, key: string) => void;
+    setCurrentJob: (id: string, value: boolean) => void;
+    removeExperience: (id: string) => void;
 };
 
 export const ExperiencesContext = createContext<ExperiencesContextType | null>(null);

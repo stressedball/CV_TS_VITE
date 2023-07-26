@@ -12,16 +12,16 @@ export default function Address() {
                 <div className='flex align wrap block'>
                     <input // address number
                         value={identity.address.number}
-                        onChange={(e) => {
-                            handleIdentity({
-                                ...identity,
-                                address: {
-                                    number: String(e.target.value),
-                                },
-                            });
+                        onChange={(e: React.SyntheticEvent) => {
+                            const target = e.target as HTMLInputElement;
+                            identity.address.number = target.value;
+                            handleIdentity(identity);
                         }}
                         onBlur={(e) => e.target.classList.add('compact')}
-                        onClick={(e: any) => e.target.classList.remove('compact')}
+                        onClick={(e: React.SyntheticEvent) => {
+                            const target = e.target as HTMLInputElement;
+                            target.classList.remove('compact');
+                        }}
                         className={`${identity.address.number !== '' ? 'compact' : ''}`}
                         type='number'
                         name='addressNumber'
@@ -29,15 +29,15 @@ export default function Address() {
                     />
                     <input // address street
                         onChange={(e) => {
-                            handleIdentity({
-                                ...identity,
-                                address: {
-                                    street: e.target.value,
-                                },
-                            });
+                            const target = e.target as HTMLInputElement;
+                            identity.address.street = target.value;
+                            handleIdentity(identity);
                         }}
                         onBlur={(e) => e.target.classList.add('compact')}
-                        onClick={(e: any) => e.target.classList.remove('compact')}
+                        onClick={(e: React.SyntheticEvent) => {
+                            const target = e.target as HTMLInputElement;
+                            target.classList.remove('compact');
+                        }}
                         className={`${identity.address.street !== '' ? 'compact' : ''}`}
                         type='text'
                         name='street'
@@ -46,16 +46,16 @@ export default function Address() {
                     />
                     <input // address town
                         value={identity.address.town}
-                        onChange={(e) => {
-                            handleIdentity({
-                                ...identity,
-                                address: {
-                                    town: e.target.value,
-                                },
-                            });
+                        onChange={(e: React.SyntheticEvent) => {
+                            const target = e.target as HTMLInputElement;
+                            identity.address.town = target.value;
+                            handleIdentity(identity);
                         }}
                         onBlur={(e) => e.target.classList.add('compact')}
-                        onClick={(e: any) => e.target.classList.remove('compact')}
+                        onClick={(e: React.SyntheticEvent) => {
+                            const target = e.target as HTMLInputElement;
+                            target.classList.remove('compact');
+                        }}
                         className={`${identity.address.town !== '' ? 'compact' : ''}`}
                         id='town'
                         type='text'
@@ -64,15 +64,15 @@ export default function Address() {
                     <input // address zipCode
                         value={identity.address.zipCode}
                         onChange={(e) => {
-                            handleIdentity({
-                                ...identity,
-                                address: {
-                                    zipCode: e.target.value,
-                                },
-                            });
+                            const target = e.target as HTMLInputElement;
+                            identity.address.zipCode = target.value;
+                            handleIdentity(identity);
                         }}
                         onBlur={(e) => e.target.classList.add('compact')}
-                        onClick={(e: any) => e.target.classList.remove('compact')}
+                        onClick={(e: React.SyntheticEvent) => {
+                            const target = e.target as HTMLInputElement;
+                            target.classList.remove('compact');
+                        }}
                         className={`${identity.address.zipCode !== '' ? 'compact' : ''}`}
                         type='number'
                         name='zipCode'

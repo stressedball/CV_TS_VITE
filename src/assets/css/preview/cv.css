@@ -79,8 +79,16 @@ span {
     padding-top: 2rem;
 }
 
-.cvBlock div:nth-child(2) {
+.cvBlock div {
     padding-left: 2rem;
+}
+
+.cvBlock div:not(.flex.align) {
+    padding-left: 4rem;
+}
+
+.cvBlock div:not(:last-child) {
+    padding-bottom: 0.5rem;
 }
 
 p.bold {
@@ -93,6 +101,7 @@ p.underline {
 
 ul {
     margin: 0;
+    padding-left: 4rem;
 }
 
 li {

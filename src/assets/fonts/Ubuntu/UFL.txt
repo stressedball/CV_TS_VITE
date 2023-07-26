@@ -58,7 +58,7 @@ fields can be easily viewed by the user.
 2) The font name complies with the following:
 (a) The Original Version must retain its name, unmodified.
 (b) Modified Versions which are Substantially Changed must be renamed to
-avoid use of the name of the Original Version or similar names entirely.
+a() => void use of the name of the Original Version or similar names entirely.
 (c) Modified Versions which are not Substantially Changed must be
 renamed to both (i) retain the name of the Original Version and (ii) add
 additional naming elements to distinguish the Modified Version from the
@@ -81,7 +81,7 @@ created using the Font Software may only be distributed under this
 licence.
 
 TERMINATION
-This licence becomes null and void if any of the above conditions are
+This licence becomes null and () => void if any of the above conditions are
 not met.
 
 DISCLAIMER

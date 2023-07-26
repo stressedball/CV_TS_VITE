@@ -5,9 +5,9 @@ import {example1} from '../Example';
 
 export type SkillsContextType = {
     skills: Array<SkillInterface>;
-    addSkill: Function;
-    handleSkill: Function;
-    removeSkill: Function;
+    addSkill: () => void;
+    handleSkill: (id: string, value: string) => void;
+    removeSkill: (id: string) => void;
 };
 
 export const SkillsContext = createContext<SkillsContextType | null>(null);

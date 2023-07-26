@@ -18,7 +18,10 @@ export default function Front() {
                         });
                     }}
                     onBlur={(e) => e.target.classList.add('compact')}
-                    onClick={(e: any) => e.target.classList.remove('compact')}
+                    onClick={(e: React.SyntheticEvent) => {
+                        const target = e.target as HTMLInputElement;
+                        target.classList.remove('compact');
+                    }}
                     className={`identity ${identity.firstName !== '' ? 'compact' : ''}`}
                     type='text'
                     name='firstName'
@@ -33,7 +36,10 @@ export default function Front() {
                         });
                     }}
                     onBlur={(e) => e.target.classList.add('compact')}
-                    onClick={(e: any) => e.target.classList.remove('compact')}
+                    onClick={(e: React.SyntheticEvent) => {
+                        const target = e.target as HTMLInputElement;
+                        target.classList.remove('compact');
+                    }}
                     className={`identity ${identity.lastName !== '' ? 'compact' : ''}`}
                     type='text'
                     name='lastName'
@@ -47,7 +53,10 @@ export default function Front() {
                         });
                     }}
                     onBlur={(e) => e.target.classList.add('compact')}
-                    onClick={(e: any) => e.target.classList.remove('compact')}
+                    onClick={(e: React.SyntheticEvent) => {
+                        const target = e.target as HTMLInputElement;
+                        target.classList.remove('compact');
+                    }}
                     className={`identity ${identity.currentTitle !== '' ? 'compact' : ''}`}
                     type='text'
                     name='currentTitle'
@@ -63,7 +72,10 @@ export default function Front() {
                         });
                     }}
                     onBlur={(e) => e.target.classList.add('compact')}
-                    onClick={(e: any) => e.target.classList.remove('compact')}
+                    onClick={(e: React.SyntheticEvent) => {
+                        const target = e.target as HTMLInputElement;
+                        target.classList.remove('compact');
+                    }}
                     className={`identity ${identity.description !== '' ? 'compact' : ''}`}
                     type='text'
                     name='description'

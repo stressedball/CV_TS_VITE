@@ -3,7 +3,7 @@ import {IdentityInterface, ChildrenType} from '../Types';
 
 export type IdentityContextType = {
     identity: IdentityInterface;
-    handleIdentity: Function;
+    handleIdentity: (identity: IdentityInterface) => void;
 };
 
 export const IdentityContext = createContext<IdentityContextType | null>(null);

@@ -6,11 +6,13 @@ svg {
 /* ADD */
 svg.add {
     fill: none;
+    stroke: var(--accent);
 }
 
-svg.add:hover{
+svg.add.hover{
     stroke: var(--secondary);
 }
+
 /* REMOVE */
 svg.remove {
     padding-left: 0.2rem;
