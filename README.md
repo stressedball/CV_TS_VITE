@@ -1,27 +1,25 @@
-# React + TypeScript + Vite
+# CV APP
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Idea is to build a quick app that lets the user input some information and have a real time visualisation.
 
-Currently, two official plugins are available:
+## Vite
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## React
 
-## Expanding the ESLint configuration
+## Typescript
 
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
+Deployment on Netlify
 
-- Configure the top-level `parserOptions` property like this:
+[Live Demo](https://fancy-toffee-a20bdb.netlify.app/)
 
-```js
-   parserOptions: {
-    ecmaVersion: 'latest',
-    sourceType: 'module',
-    project: ['./tsconfig.json', './tsconfig.node.json'],
-    tsconfigRootDir: __dirname,
-   },
-```
+### Heavy use of `useContext` to manage all the infos of the user
 
-- Replace `plugin:@typescript-eslint/recommended` to `plugin:@typescript-eslint/recommended-type-checked` or `plugin:@typescript-eslint/strict-type-checked`
-- Optionally add `plugin:@typescript-eslint/stylistic-type-checked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and add `plugin:react/recommended` & `plugin:react/jsx-runtime` to the `extends` list
+### Use of CSS
+
+### Responsive enough
+
+***To do***
+
+- Make functionality to upload image
+- Make functionality to download cv
+- Add dark mode?

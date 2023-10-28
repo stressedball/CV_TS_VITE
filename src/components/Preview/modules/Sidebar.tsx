@@ -5,6 +5,7 @@ import EmailSvg from '../../../assets/svg/EmailSvg';
 import GitSvg from '../../../assets/svg/Github';
 import Linkedin from '../../../assets/svg/Linkedin';
 import Phone from '../../../assets/svg/Phone';
+
 export default function Sidebar(props: {identity: IdentityInterface}) {
     return (
         <div id='sidebar'>

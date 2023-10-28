@@ -25,6 +25,7 @@ body {
   padding: 0;
   background-color: var(--primary);
   color: var(--secondary);
+  overflow: auto;
 }
 
 body,
@@ -43,6 +44,10 @@ svg:hover {
   padding: 2rem;
   box-sizing: border-box;
   gap: 1rem;
+}
+
+#previewContainer, #makeContainer{
+  height: 100%;
 }
 
 #previewContainer {
